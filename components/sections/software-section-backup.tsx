@@ -76,16 +76,17 @@ export function SoftwareSection() {
           </div>
 
           {/* CardSwap with internship application cards */}
-          <CardSwap
-            width={320}
-            height={400}
-            cardDistance={50}
-            verticalDistance={60}
-            delay={4000}
-            pauseOnHover={true}
-            skewAmount={4}
-            easing="elastic"
-          >
+          <div className="absolute right-4 top-8 sm:right-8 md:right-12 lg:right-16 xl:right-20 2xl:right-24">
+            <CardSwap
+              width={320}
+              height={400}
+              cardDistance={50}
+              verticalDistance={60}
+              delay={4000}
+              pauseOnHover={true}
+              skewAmount={4}
+              easing="elastic"
+            >
             <Card className="bg-gradient-to-br from-blue-600 to-blue-800 border-blue-500/50 p-6">
               <div className="text-white h-full flex flex-col">
                 <div className="flex items-center justify-between mb-4">
@@ -186,6 +187,7 @@ export function SoftwareSection() {
               </div>
             </Card>
           </CardSwap>
+          </div>
         </motion.div>
 
         {/* Bottom Statistics Cards */}
