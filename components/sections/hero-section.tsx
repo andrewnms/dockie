@@ -14,27 +14,56 @@ export function HeroSection() {
   ]
   
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  const [nextVideoIndex, setNextVideoIndex] = useState(1)
+  const [isTransitioning, setIsTransitioning] = useState(false)
   
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length)
+      setIsTransitioning(true)
+      
+      // After transition starts, update indices
+      setTimeout(() => {
+        setCurrentVideoIndex(nextVideoIndex)
+        setNextVideoIndex((nextVideoIndex + 1) % videos.length)
+        setIsTransitioning(false)
+      }, 1000) // Half of transition duration
     }, 3000) // Change video every 3 seconds
     
     return () => clearInterval(interval)
-  }, [videos.length])
+  }, [nextVideoIndex, videos.length])
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
-      {/* Background video with overlay */}
-      <video
-        key={currentVideoIndex} // Force re-render when video changes
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-      >
-        <source src={videos[currentVideoIndex]} type="video/mp4" />
-      </video>
+      {/* Background videos with crossfade transition */}
+      <div className="absolute inset-0 w-full h-full">
+        {/* Current video */}
+        <video
+          key={`current-${currentVideoIndex}`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ${
+            isTransitioning ? 'opacity-0' : 'opacity-100'
+          }`}
+        >
+          <source src={videos[currentVideoIndex]} type="video/mp4" />
+        </video>
+        
+        {/* Next video (preloaded and ready) */}
+        <video
+          key={`next-${nextVideoIndex}`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ${
+            isTransitioning ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <source src={videos[nextVideoIndex]} type="video/mp4" />
+        </video>
+      </div>
+      
       <div className="absolute inset-0 bg-black/60" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
