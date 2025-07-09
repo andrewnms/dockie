@@ -78,24 +78,15 @@ export function HeroSection() {
             Done in 48 Hours.
           </motion.h1>
           
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-xl md:text-2xl text-white/90 mb-8 max-w-lg"
-          >
-            The largest platform connecting Filipino students with internship opportunities. Apply fast, get hired faster.
-          </motion.p>
-          
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row gap-4 items-start items-center"
+            className="flex flex-col sm:flex-row gap-4 items-start items-center py-16"
           >
             <Button 
               size="lg" 
-              className="bg-white hover:bg-gray-100 text-black px-8 py-4 text-lg font-semibold rounded-full"
+              className="bg-white hover:bg-gray-100 text-black px-8 py-4text-lg font-semibold rounded-full"
             >
               Find Internships
             </Button>
