@@ -2,19 +2,38 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
 
 export function HeroSection() {
+  const videos = [
+    "/celebrate_hero.mp4",
+    "/code_ex.mp4", 
+    "/happy_students.mp4",
+    "/wave_student.mp4",
+    "/wee_closeup.mp4"
+  ]
+  
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length)
+    }, 3000) // Change video every 3 seconds
+    
+    return () => clearInterval(interval)
+  }, [videos.length])
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
       {/* Background video with overlay */}
       <video
+        key={currentVideoIndex} // Force re-render when video changes
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
       >
-        <source src="/celebrate_hero.mp4" type="video/mp4" />
+        <source src={videos[currentVideoIndex]} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/60" />
       
