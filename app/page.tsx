@@ -7,7 +7,6 @@ import {
   SoftwareSection,
   CustomersSection,
   BusinessSection,
-  StatsSection,
   EcosystemSection,
 } from "@/components/sections"
 import { Navigation } from "@/components/navigation"
@@ -23,7 +22,6 @@ export default function HomePage() {
       <CustomersSection />
       <BusinessSection />
       <EcosystemSection />
-      <StatsSection />
     </div>
   )
 }
