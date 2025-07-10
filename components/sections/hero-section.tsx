@@ -82,7 +82,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row gap-4 items-start items-center py-16"
+            className="flex flex-col sm:flex-row gap-4 items-start items-center pt-32 lg:py-16"
           >
             <Button 
               size="lg" 

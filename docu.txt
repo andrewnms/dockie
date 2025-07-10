@@ -1,0 +1,98 @@
+1. focus on pre-predeployment, dont' bother witht he post deplayment stuff because that isn't what's driving them to sign up. 
+show them numbers, like how quickly they can get ar esponse
+tell them maybe about transparency. see where they are in the process. 
+see which jobs are applicable for your school that you can take for credit
+the best companies are with us. show a list of our featured companies
+
+take out useless things like mobile view, dashobard. focus on message
+
+Why do they use this platform? WHy do they want to hire Interns?
+- To track interns more efficiently, put up listings (What makes us different from other job boards??), DOCUMENT PROCESSING. But we have to keep it out of the landing page because it is our Competitive advantage.
+- They hire interns for More Manpower for free/low cost.
+
+
+structure
+student side 
+
+nav bar ->
+<left side name tag>
+<Employers sign in button>
+<Start for free button>
+
+hero ->
+<Hero tag>
+<sub tag>
+<main button> <sub button for employers>
+
+quick benefits section ->
+<clickable sentences>
+<Img collage>
+
+Apply fast, get hired faster section ->
+Keep as is, it's in current page.
+
+
+numbers stats towards employment ->
+<Title tag for stats 1><Title tag for stats 2>
+<sub desc text>
+
+<Big picture>
+
+Companies with Jobs ->
+
+<Title heading>
+<Carousel of companies, Big logo, slightly faded>
+
+
+
+
+
+employer side
+hero ->
+
+<Hero tag>
+<sub tag>
+<Get started now><Check current listings on the platform>
+
+quick benefits section ->
+<title header with sentences>
+<sub title>
+<img collage>
+
+numbers section ->
+
+<Time saved tag>
+<sub tag>
+<Big picture of dashboard>
+
+document processing section ->
+unsure if to show this. shot out the dark.
+
+
+
+student side
+hero -> 
+
+internship? Hired in 48 hours. 
+
+benefits -> 
+
+Quickest way to get a response from Employers.
+Transparency, shows them progress for each of their applications.
+Credit for School, shows them which jobs are applicable for them and which can be credited.
+More companies onboarded than official platforms.
+
+
+
+
+employer side ->
+hero ->
+
+Hire interns in under 20 minutes.
+
+
+benefits ->
+
+CRM for taking note of every intern application as well as seamless interview booking process with applications.
+Listings broadcasted to multiple schools with great talents available.
+Less paperwork, document processing within the platform.

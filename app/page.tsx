@@ -3,25 +3,27 @@
 import {
   HeroSection,
   PlatformSection,
-  EnterpriseSection,
   SoftwareSection,
   CustomersSection,
-  BusinessSection,
-  EcosystemSection,
+  Testimonials,
 } from "@/components/sections"
 import { Navigation } from "@/components/navigation"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-black">
+      {/* Navbar */}
       <Navigation />
+      {/* Hero Section */}
       <HeroSection />
+      {/* Benefits clickable */}
       <PlatformSection />
-      <EnterpriseSection />
+      {/* Apply Fast */}
       <SoftwareSection />
+      {/* Numbers section */}
       <CustomersSection />
-      <BusinessSection />
-      <EcosystemSection />
+      {/* Companies showcase */}
+      <Testimonials />
     </div>
   )
 }

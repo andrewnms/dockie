@@ -1,9 +1,6 @@
 // Section components index
-export { BusinessSection } from './business-section'
-export { CustomersSection } from './customers-section'
-export { DeveloperSection } from './developer-section'
-export { EcosystemSection } from './ecosystem-section'
-export { EnterpriseSection } from './enterprise-section'
+export { CustomersSection } from './4thSection/customers-section'
+export { Testimonials } from './5th section/ecosystem-section'
 export { HeroSection } from './hero-section'
-export { PlatformSection } from './platform-section'
-export { SoftwareSection } from './software-section'
+export { PlatformSection } from './2ndSection/platform-section'
+export { SoftwareSection } from './3rdSection/software-section'
