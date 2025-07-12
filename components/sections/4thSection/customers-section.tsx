@@ -83,14 +83,10 @@ export function CustomersSection() {
               <div className="w-full max-w-sm">
                 <div className="bg-gray-50 rounded-lg p-4 mb-4">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-600">Contact</span>
-                    <span className="text-xs text-blue-600">Have an account? Log in</span>
+                    <span className="text-sm text-gray-600">Cover letter</span>
                   </div>
-                  <div className="bg-white border rounded p-2 mb-2 text-sm text-gray-400">
-                    Email address or phone number
-                  </div>
-                  <div className="text-xs text-gray-500">
-                    ☑️ Email me with news and offers
+                  <div className="bg-white border rounded p-2 mb-2 text-sm text-gray-800">
+                    I'm excited to bring my programming experience to Quickdog and help out with the team.
                   </div>
                 </div>
                 <div className="bg-blue-600 text-white rounded-lg p-3 text-center font-semibold">
