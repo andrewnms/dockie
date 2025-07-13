@@ -29,7 +29,7 @@ export function CustomersSection() {
             {...motionVariants.fadeInRight}
             transition={{ ...motionVariants.fadeInRight.transition, delay: 0.2 }}
           >
-            <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 h-64 flex items-center justify-center">
+            <div className="bg-gray-900 rounded-2xl p-8 h-64 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-24 h-16 bg-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
                   <div className="w-16 h-10 bg-white rounded flex items-center justify-center">
@@ -57,12 +57,12 @@ export function CustomersSection() {
             </div>
           </div>
           <div className={animations.fadeInRight(isVisible, 600)}>
-            <div className="text-sm text-gray-500 mb-4">Multi-industry coverage</div>
+            <div className="text-sm text-gray-500 mb-4">Multi-Business coverage</div>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Find opportunities across tech, healthcare, finance, marketing, engineering, and education sectors.
+              Find opportunities across the biggest companies in the Philippines
             </h3>
-            <p className="text-gray-600 text-lg">
-              Our platform connects students with internship opportunities spanning all major industries in the Philippines.
+            <p className="text-gray-300 max-w-3xl text-lg leading-relaxed mb-6">
+              With BetterInternship, we made it easier for you to find opportunities with the biggest companies in the philippines.
             </p>
           </div>
         </div>
@@ -74,8 +74,8 @@ export function CustomersSection() {
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               BetterInternship applications are fast, fully customizable, and optimized to connect talent.
             </h3>
-            <p className="text-gray-600 text-lg">
-              BetterInternship applications are fast, fully customizable, and optimized to connect talent.
+            <p className="text-gray-300 max-w-3xl text-lg leading-relaxed mb-6">
+              You'll look so good in front of recruiters, they'll want to pay you
             </p>
           </div>
           <div className={animations.fadeInRight(isVisible, 1000)}>

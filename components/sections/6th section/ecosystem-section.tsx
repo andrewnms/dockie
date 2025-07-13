@@ -1,4 +1,4 @@
-import { TestimonialsColumn } from "@/components/sections/5th section/testimonials-columns-1";
+import { TestimonialsColumn } from "@/components/sections/6th section/testimonials-columns-1";
 import { motion } from "framer-motion";
 
 const testimonials = [

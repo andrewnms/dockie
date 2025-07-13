@@ -72,10 +72,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none mb-6"
+            className="text-7xl  font-bold text-white leading-none mb-6"
           >
-            Internship? <br />
-            Done in 48 Hours.
+            No More Waiting. <br />
+            Get Interviewed in 48 Hours.
           </motion.h1>
           
           <motion.div 
@@ -86,7 +86,7 @@ export function HeroSection() {
           >
             <Button 
               size="lg" 
-              className="bg-white hover:bg-gray-100 text-black px-8 py-4text-lg font-semibold rounded-full"
+              className="bg-white hover:bg-gray-100 text-black px-8 py-4 text-lg font-semibold rounded-full"
             >
               Find Internships
             </Button>
