@@ -14,54 +14,25 @@ export function HeroSection() {
   ]
   
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
-  const [nextVideoIndex, setNextVideoIndex] = useState(1)
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsTransitioning(true)
-      
-      // After transition starts, update indices
-      setTimeout(() => {
-        setCurrentVideoIndex(nextVideoIndex)
-        setNextVideoIndex((nextVideoIndex + 1) % videos.length)
-        setIsTransitioning(false)
-      }, 1000) // Half of transition duration
-    }, 3000) // Change video every 3 seconds
-    
+      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length)
+    }, 3000)
     return () => clearInterval(interval)
-  }, [nextVideoIndex, videos.length])
+  }, []) // Only run once on mount
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
-      {/* Background videos with crossfade transition */}
+      {/* Background video switches to next every 3 seconds, no crossfade */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Current video */}
         <video
-          key={`current-${currentVideoIndex}`}
+          key={currentVideoIndex}
           autoPlay
-          loop
           muted
           playsInline
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ${
-            isTransitioning ? 'opacity-0' : 'opacity-100'
-          }`}
-        >
-          <source src={videos[currentVideoIndex]} type="video/mp4" />
-        </video>
-        
-        {/* Next video (preloaded and ready) */}
-        <video
-          key={`next-${nextVideoIndex}`}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ${
-            isTransitioning ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <source src={videos[nextVideoIndex]} type="video/mp4" />
-        </video>
+          className="absolute inset-0 w-full h-full object-cover"
+          src={videos[currentVideoIndex]}
+        />
       </div>
       
       <div className="absolute inset-0 bg-black/60" />
