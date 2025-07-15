@@ -1,20 +1,13 @@
-import { CardStackDemo } from "./use-cardstack";
+import { SoftwareSection } from "./use-cardstack";
 
 function Feature() {
   return (
-    <div className="w-full py-20 lg:py-40 border-t">
-      <div className="">
-        <div className="flex flex-col-reverse lg:flex-row lg:items-center">
-          <div className="relative group items-center py-16 lg:py-6 justify-center w-full h-full flex-1">
-            {/* Dimming overlay */}
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition duration-300 pointer-events-none z-10" />
-            <div className="relative z-20">
-              <CardStackDemo/>
-            </div>
-          </div>
+    <div className="w-full py-20 border-t overflow-hidden">
+
+        <div className="flex flex-col lg:flex-row lg:items-center gap-20">
           <div className="flex gap-4 pl-0 lg:pl-20 flex-col flex-1">
-            <div className="flex gap-2 mx-8 flex-col">
-              <h2 className="text-7xl tracking-tighter lg:max-w-xl font-regular text-left">
+            <div className="flex gap-2 mx-8 flex-col z-30">
+              <h2 className="text-7xl tracking-tighter lg:max-w-xl font-regular text-left ">
                 Apply fast, Get Hired faster.
               </h2>
               <p className="text-lg max-w-xl lg:max-w-sm leading-relaxed tracking-tight text-muted-foreground text-left">
@@ -22,8 +15,13 @@ function Feature() {
               </p>
             </div>
           </div>
+          <div className="relative group items-center justify-center w-full flex-1">
+            <div className="relative z-10">
+              <SoftwareSection/>
+            </div>
+          </div>
+          
         </div>
-      </div>
     </div>
   );
 }
