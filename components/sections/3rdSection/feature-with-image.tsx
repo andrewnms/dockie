@@ -1,80 +1,25 @@
-import { useState } from "react";
-import Image from "next/image";
-import { GripVertical } from "lucide-react";
+import { CardStackDemo } from "./use-cardstack";
 
 function Feature() {
-  const [inset, setInset] = useState<number>(50);
-  const [onMouseDown, setOnMouseDown] = useState<boolean>(false);
-
-  const onMouseMove = (e: React.MouseEvent | React.TouchEvent) => {
-    if (!onMouseDown) return;
-
-    const rect = e.currentTarget.getBoundingClientRect();
-    let x = 0;
-
-    if ("touches" in e && e.touches.length > 0) {
-      x = e.touches[0].clientX - rect.left;
-    } else if ("clientX" in e) {
-      x = e.clientX - rect.left;
-    }
-    
-    const percentage = (x / rect.width) * 100;
-    setInset(percentage);
-  };
-
   return (
-    <div className="w-full py-4 lg:py-8">
-      <div className="container mx-auto">
-        <div className="flex flex-col gap-4">
-          <div className=" w-full">
-            <div
-              className="relative aspect-video w-full h-full overflow-hidden rounded-2xl select-none"
-              onMouseMove={onMouseMove}
-              onMouseUp={() => setOnMouseDown(false)}
-              onTouchMove={onMouseMove}
-              onTouchEnd={() => setOnMouseDown(false)}
-            >
-              <div
-                className="bg-muted h-full w-1 absolute z-20 top-0 -ml-1 select-none"
-                style={{
-                  left: inset + "%",
-                }}
-              >
-                <button
-                  className="bg-muted rounded hover:scale-110 transition-all w-5 h-10 select-none -translate-y-1/2 absolute top-1/2 -ml-2 z-30 cursor-ew-resize flex justify-center items-center"
-                  onTouchStart={(e) => {
-                    setOnMouseDown(true);
-                    onMouseMove(e);
-                  }}
-                  onMouseDown={(e) => {
-                    setOnMouseDown(true);
-                    onMouseMove(e);
-                  }}
-                  onTouchEnd={() => setOnMouseDown(false)}
-                  onMouseUp={() => setOnMouseDown(false)}
-                >
-                  <GripVertical className="h-4 w-4 select-none" />
-                </button>
-              </div>
-              <Image
-                src="/3rdSec/2.png"
-                alt="feature8"
-                width={1920}
-                height={1080}
-                priority
-                className="absolute left-0 top-0 z-10 w-full h-full aspect-video rounded-2xl select-none border"
-                style={{
-                  clipPath: "inset(0 0 0 " + inset + "%)",
-                }}
-              />
-              <Image
-                src="/3rdSec/1.png"
-                alt=""
-                width={1920}
-                height={1080}
-                priority
-                className="absolute left-0 top-0 w-full h-full aspect-video rounded-2xl select-none border"
-              />
+    <div className="w-full py-20 lg:py-40 border-t">
+      <div className="">
+        <div className="flex flex-col-reverse lg:flex-row lg:items-center">
+          <div className="relative group items-center py-16 lg:py-6 justify-center w-full h-full flex-1">
+            {/* Dimming overlay */}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition duration-300 pointer-events-none z-10" />
+            <div className="relative z-20">
+              <CardStackDemo/>
+            </div>
+          </div>
+          <div className="flex gap-4 pl-0 lg:pl-20 flex-col flex-1">
+            <div className="flex gap-2 mx-8 flex-col">
+              <h2 className="text-7xl tracking-tighter lg:max-w-xl font-regular text-left">
+                Apply fast, Get Hired faster.
+              </h2>
+              <p className="text-lg max-w-xl lg:max-w-sm leading-relaxed tracking-tight text-muted-foreground text-left">
+                Instantly apply to jobs with a single click—no forms, no hassle.
+              </p>
             </div>
           </div>
         </div>

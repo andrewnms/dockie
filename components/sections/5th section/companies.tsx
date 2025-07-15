@@ -72,7 +72,7 @@ interface LogoCarouselProps {
   logos: Logo[];
 }
 
-export function LogoCarousel({ columns = 3, logos }: LogoCarouselProps) {
+export function LogoCarousel({ columns = 5, logos }: LogoCarouselProps) {
   const [logoColumns, setLogoColumns] = useState<Logo[][]>([]);
   const [time, setTime] = useState(0);
 
@@ -110,7 +110,7 @@ export function LogoCarousel({ columns = 3, logos }: LogoCarouselProps) {
 
   return (
     <div className="bg-black w-full">
-      <div className="w-screen max-w-none bg-white flex justify-center gap-4 py-8">
+      <div className="w-full bg-white flex justify-center py-8">
         {logoColumns.map((columnLogos, index) => (
           <LogoColumn
             key={index}

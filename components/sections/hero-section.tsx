@@ -12,9 +12,7 @@ export function HeroSection() {
     "/wave_student.mp4",
     "/wee_closeup.mp4"
   ]
-  
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length)
