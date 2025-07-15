@@ -47,31 +47,45 @@ export const CardStack = ({
         return (
           <Link href={card.link} key={card.id} passHref>
             <motion.div
-              className="absolute bg-white h-80 w-full max-w-xs p-4 rounded-2xl shadow-xl border border-neutral-200 shadow-black/[0.1] flex flex-col justify-between cursor-pointer
-                md:h-[28rem] md:max-w-xl md:p-6"
-              style={{
-                transformOrigin: "top center",
-              }}
+              className="absolute bg-white h-[22rem] w-full max-w-xs p-4 rounded-2xl shadow-xl border border-neutral-200 shadow-black/[0.1] flex flex-col justify-between cursor-pointer 
+    sm:h-80 md:h-[28rem] md:max-w-xl md:p-6"
+              style={{ transformOrigin: "top center" }}
               animate={{
                 top: index * -CARD_OFFSET,
                 scale: 1 - index * SCALE_FACTOR,
                 zIndex: cards.length - index,
               }}
             >
-              {/* Badge */}
-              <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-2 w-fit">
-                has DLSU MOA
-              </span>
-              <div className="font-normal text-neutral-700 text-base md:text-xl">
-                {card.content}
+              {/* Top badges and time */}
+              <div className="flex flex-wrap items-center justify-between mb-3 gap-y-2">
+                <div className="flex gap-2 flex-wrap">
+                  <span className="inline-block bg-neutral-200 text-black text-xs font-semibold px-3 py-1 rounded-full">
+                    New Listing
+                  </span>
+                  <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    has DLSU MOA
+                  </span>
+                </div>
+                <span className="text-black text-xs font-medium ml-auto">
+                  2 days ago
+                </span>
               </div>
-              <div>
-                <p className="text-black text-lg md:text-2xl font-medium">
+              {/* Main content */}
+              <div className="flex flex-col gap-1 mb-4">
+                <p className="text-black text-xl md:text-2xl font-bold">
                   {card.name}
                 </p>
-                <p className="text-black text-sm md:text-lg font-normal">
+                <p className="text-black text-sm md:text-base font-normal">
                   {card.designation}
                 </p>
+              </div>
+              {/* Details list */}
+              <div className="flex flex-col text-black gap-2 mb-6">{card.content}</div>
+              {/* Button */}
+              <div className="mt-auto">
+                <button className="w-full bg-white border border-neutral-300 rounded-lg py-3 text-black font-semibold text-base hover:bg-neutral-100 transition">
+                  Apply Now
+                </button>
               </div>
             </motion.div>
           </Link>
