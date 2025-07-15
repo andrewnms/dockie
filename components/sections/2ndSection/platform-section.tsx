@@ -26,7 +26,7 @@ const features = [
 
 export function PlatformSection() {
   return (
-        <div className="mb-8">
+        <div className="mb-8 border-t h-[100vh]">
           <FeatureSteps 
             features={features}
             title="The complete internship platform for students."

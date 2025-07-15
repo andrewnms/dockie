@@ -17,6 +17,7 @@ const demoLogos = [
 
 function LogoCarouselBasic() {
 	return (
+		<div >
 		<Card>
 			<CardContent className="py-6">
 				<div className="text-center space-y-4 mb-12">
@@ -30,6 +31,7 @@ function LogoCarouselBasic() {
 				<LogoCarousel logos={demoLogos} />
 			</CardContent>
 		</Card>
+		</div>
 	);
 }
 

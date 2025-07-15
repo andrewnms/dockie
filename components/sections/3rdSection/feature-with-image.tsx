@@ -2,7 +2,7 @@ import { SoftwareSection } from "./use-cardstack";
 
 export function Feature() {
   return (
-    <div className="w-full py-20 border-t overflow-hidden">
+    <div className="w-full py-20 border-t overflow-hidden h-[100vh]">
 
         <div className="flex flex-col lg:flex-row lg:items-center gap-20">
           <div className="flex gap-4 pl-0 lg:pl-20 flex-col flex-1">
