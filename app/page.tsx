@@ -6,7 +6,7 @@ import {
   CustomersSection,
   Testimonials,
   LogoCarouselBasic,
-  FeatureDemo
+  Feature
 } from "@/components/sections"
 import { Navigation } from "@/components/navigation"
 
@@ -18,7 +18,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <HeroSection />
       {/* Apply Fast */}
-      <FeatureDemo />
+      <Feature />
 
       {/* Benefits clickable */}
       <PlatformSection />

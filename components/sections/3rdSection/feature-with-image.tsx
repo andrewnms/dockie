@@ -1,6 +1,6 @@
 import { SoftwareSection } from "./use-cardstack";
 
-function Feature() {
+export function Feature() {
   return (
     <div className="w-full py-20 border-t overflow-hidden">
 
@@ -26,4 +26,3 @@ function Feature() {
   );
 }
 
-export { Feature };
